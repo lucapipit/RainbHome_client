@@ -1,0 +1,94 @@
+.dropdown-menu {
+   padding: 5px;
+   box-shadow: 0px 0px 8px rgb(211, 211, 211);
+   border: 1px solid #fff;
+}
+
+.dropdown-menu>a {
+   border-radius: 50px;
+   margin: 3px 0;
+   color: #fff;
+   font-weight: bold;
+}
+
+:root {
+   --nav-h: 72px;
+}
+
+.navSpacer{
+   height: 72px;
+}
+
+.myGlassNav {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: var(--nav-h);
+   z-index: 1050;
+   background: rgba(191, 191, 191, 0.45);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+   color: #333 !important;
+}
+
+.heroCarousel {
+   height: 100vh;
+   height: 100dvh;
+}
+
+.heroCarousel,
+.heroCarousel .carousel-inner,
+.heroCarousel .carousel-item {
+   height: 100vh;
+}
+
+.heroCarousel .carousel-item>.overflowImg {
+   height: 100vh;
+   width: 100%;
+}
+
+.overflowImg {
+   height: 100vh;
+   width: 100%;
+   overflow: hidden;
+   display: block;
+}
+
+.overflowImg>img {
+   width: 100%;
+   height: 100vh;
+   object-fit: cover;
+   display: block;
+}
+
+@media (max-width: 768px) {
+   .heroCarousel {
+      height: 60vh;
+      height: 60dvh;
+   }
+
+   .heroCarousel,
+   .heroCarousel .carousel-inner,
+   .heroCarousel .carousel-item {
+      height: 60vh;
+   }
+
+   .heroCarousel .carousel-item>.overflowImg {
+      height: 60vh;
+   }
+
+   .overflowImg {
+      height: 60vh;
+   }
+
+   .overflowImg>img {
+      height: 60vh;
+   }
+}
+
+.heroCarousel {
+   margin-top: calc(var(--nav-h) * -1);
+   padding-top: var(--nav-h);
+}
