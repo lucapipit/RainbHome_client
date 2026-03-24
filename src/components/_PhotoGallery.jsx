@@ -1,9 +1,32 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 
-const TOTAL_IMAGES = 206;
+const TOTAL_IMAGES = 75;
 const SWIPE_THRESHOLD = 50;
 const FADE_DURATION = 180;
+
+// carica tutte le immagini dalla cartella
+const req = require.context('../assets/pics_medium', false, /\.jpg$/);
+
+const imageMap = req.keys().reduce((acc, path) => {
+  const match = path.match(/web-(\d+)\.jpg$/);
+  if (match) {
+    acc[match[1]] = req(path);
+  }
+  return acc;
+}, {});
+
+const getInitialLanguage = () => {
+  const savedLang = localStorage.getItem("isIta");
+
+  if (savedLang !== null) {
+    return savedLang === "true";
+  }
+
+  const browserIsItalian = navigator.language.split("-")[0] === "it";
+  localStorage.setItem("isIta", String(browserIsItalian));
+  return browserIsItalian;
+};
 
 const _PhotoGallery = () => {
   const [focusImg, setFocusImg] = useState(null);
@@ -11,6 +34,19 @@ const _PhotoGallery = () => {
   const [isFading, setIsFading] = useState(false);
   const [thumbLoaded, setThumbLoaded] = useState({});
   const [mainImgLoaded, setMainImgLoaded] = useState(false);
+  const [isIta, setIsIta] = useState(getInitialLanguage);
+
+  useEffect(() => {
+    const syncLanguage = () => {
+      setIsIta(localStorage.getItem("isIta") === "true");
+    };
+
+    window.addEventListener("languageChanged", syncLanguage);
+
+    return () => {
+      window.removeEventListener("languageChanged", syncLanguage);
+    };
+  }, []);
 
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
@@ -18,7 +54,7 @@ const _PhotoGallery = () => {
 
   const images = useMemo(() => {
     return Array.from({ length: TOTAL_IMAGES }, (_, i) =>
-      String(i + 1).padStart(3, '0')
+      String(i + 1).padStart(2, '0')
     );
   }, []);
 
@@ -115,6 +151,7 @@ const _PhotoGallery = () => {
 
   return (
     <div>
+      <h1 className='dancing-script-400 text-center pt-5 textDarkGray'>{isIta ? "Galleria" : "Gallery"}</h1>
       <div className="py-4 px-2 d-flex flex-wrap justify-content-center">
         {images.map((num) => (
           <div
@@ -131,7 +168,7 @@ const _PhotoGallery = () => {
             <img
               loading="lazy"
               className="w-100 galleryThumbImg"
-              src={`/pics/web-${num}.jpg`}
+              src={imageMap[num]}
               alt={`Gallery ${num}`}
               onLoad={() => handleThumbLoad(num)}
               style={{
@@ -183,12 +220,11 @@ const _PhotoGallery = () => {
 
               <img
                 key={displayImg}
-                className={`galleryFocusedImg ${
-                  isFading || !mainImgLoaded
-                    ? 'galleryFocusedImgHidden'
-                    : 'galleryFocusedImgVisible'
-                }`}
-                src={`/pics/web-${displayImg}.jpg`}
+                className={`galleryFocusedImg ${isFading || !mainImgLoaded
+                  ? 'galleryFocusedImgHidden'
+                  : 'galleryFocusedImgVisible'
+                  }`}
+                src={imageMap[displayImg]}
                 alt={`Gallery ${displayImg}`}
                 onLoad={() => setMainImgLoaded(true)}
                 draggable="false"

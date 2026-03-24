@@ -6,6 +6,10 @@
   max-width: 400px;
 }
 
+.myMaxW600 {
+  max-width: 600px;
+}
+
 .myMaxW900 {
   max-width: 900px;
 }
@@ -52,6 +56,13 @@
 
 .textBluette {
   color: #63aeff;
+}
+
+.textGray{
+  color: #777;
+}
+.textDarkGray{
+  color: #666;
 }
 
 /* language */

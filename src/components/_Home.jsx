@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import logo from "../assets/logo-xl.png";
+import tiffany from "../assets/pics_hero/web-3.jpg";
+import yellow from "../assets/pics_hero/web-1.jpg";
+import bluette from "../assets/pics_hero/web-2.jpg";
+import lilla from "../assets/pics_hero/web-4.jpg";
+import _SharedArea from './_SharedArea';
 
 const getInitialLanguage = () => {
   const savedLang = localStorage.getItem("isIta");
@@ -40,50 +45,58 @@ const _Home = () => {
         onSelect={handleSelect}
       >
         <Carousel.Item>
-          <div className='overflowImg'>
-            <img
-              src={`/pics/web-125.jpg`}
-              alt={isIta ? "Camera Doppia Tiffany" : "Tiffany Double Room"}
-            />
-          </div>
+          <a href="/tiffany">
+            <div className='overflowImg'>
+              <img
+                src={tiffany}
+                alt={isIta ? "Camera Doppia Tiffany" : "Tiffany Double Room"}
+              />
+            </div>
+          </a>
           <Carousel.Caption>
-            <h3>{isIta ? "Camera Doppia Tiffany" : "Tiffany Double Room"}</h3>
+            <h1>{isIta ? "Camera Doppia Tiffany" : "Tiffany Double Room"}</h1>
           </Carousel.Caption>
         </Carousel.Item>
 
         <Carousel.Item>
-          <div className='overflowImg border'>
-            <img
-              src={`/pics/web-096.jpg`}
-              alt={isIta ? "Camera Doppia Lilla" : "Lilac Double Room"}
-            />
-          </div>
+          <a href="/lilla">
+            <div className='overflowImg border'>
+              <img
+                src={lilla}
+                alt={isIta ? "Camera Doppia Lilla" : "Lilac Double Room"}
+              />
+            </div>
+          </a>
           <Carousel.Caption>
-            <h3>{isIta ? "Camera Doppia Lilla" : "Lilac Double Room"}</h3>
+            <h1>{isIta ? "Camera Doppia Lilla" : "Lilac Double Room"}</h1>
           </Carousel.Caption>
         </Carousel.Item>
 
         <Carousel.Item>
-          <div className='overflowImg'>
-            <img
-              src={`/pics/web-184.jpg`}
-              alt={isIta ? "Camera Doppia Gialla" : "Yellow Double Room"}
-            />
-          </div>
+          <a href="/yellow">
+            <div className='overflowImg'>
+              <img
+                src={yellow}
+                alt={isIta ? "Camera Doppia Gialla" : "Yellow Double Room"}
+              />
+            </div>
+          </a>
           <Carousel.Caption>
-            <h3>{isIta ? "Camera Doppia Gialla" : "Yellow Double Room"}</h3>
+            <h1>{isIta ? "Camera Doppia Gialla" : "Yellow Double Room"}</h1>
           </Carousel.Caption>
         </Carousel.Item>
 
         <Carousel.Item>
-          <div className='overflowImg'>
-            <img
-              src={`/pics/web-056.jpg`}
-              alt={isIta ? "Camera Singola Bluette" : "Bluette Single Room"}
-            />
-          </div>
+          <a href="/bluette">
+            <div className='overflowImg'>
+              <img
+                src={bluette}
+                alt={isIta ? "Camera Singola Bluette" : "Bluette Single Room"}
+              />
+            </div>
+          </a>
           <Carousel.Caption>
-            <h3>{isIta ? "Camera Singola Bluette" : "Bluette Single Room"}</h3>
+            <h1>{isIta ? "Camera Singola Bluette" : "Bluette Single Room"}</h1>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
@@ -164,7 +177,7 @@ const _Home = () => {
           <img src={logo} alt="RainbHome Logo" style={{ height: 100 }} />
         </div>
 
-        <h5 className='montserrat-300 w-100 myMaxW900'>
+        <h5 className='montserrat-300 w-100 myMaxW900 pb-4'>
           {isIta ? (
             <>
               Benvenuti a <b>RainbHome</b>, il vostro angolo colorato nel cuore di Roma!
@@ -214,6 +227,10 @@ const _Home = () => {
             </>
           )}
         </h5>
+      </div>
+
+      <div>
+        <_SharedArea />
       </div>
     </div>
   );
