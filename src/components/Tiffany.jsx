@@ -88,9 +88,9 @@ const Tiffany = () => {
         <div>
           <i className="bi bi-wifi textYellow"></i>{" "}
           {isIta ? (
-            <>Wi-Fi gratuito.</>
+            <>Wi-Fi gratuito</>
           ) : (
-            <>Free Wi-Fi.</>
+            <>Free Wi-Fi</>
           )}
         </div>
 
@@ -103,14 +103,14 @@ const Tiffany = () => {
           <div>
             <i className="bi bi-key-fill textBlue"></i>{" "}
             {isIta ? (
-              <>Possibilità di Self Check-in.</>
+              <>Possibilità di Self Check-in</>
             ) : (
-              <>Option for self check-in.</>
+              <>Option for self check-in</>
             )}
           </div>
 
           <div>
-            <i className="bi bi-tv-fill textTiffany"></i> Smart TV.
+            <i className="bi bi-tv-fill textTiffany"></i> Smart TV
           </div>
 
         </div>

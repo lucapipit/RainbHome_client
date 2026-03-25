@@ -112,9 +112,9 @@ const _Home = () => {
         <div>
           <i className="bi bi-house-lock-fill textTiffany"></i>{" "}
           {isIta ? (
-            <>4 camere indipendenti.</>
+            <>4 camere indipendenti</>
           ) : (
-            <>4 indipendent rooms.</>
+            <>4 indipendent rooms</>
           )}
         </div>
 
@@ -127,18 +127,18 @@ const _Home = () => {
         <div>
           <i className="bi bi-geo-alt-fill textLilla"></i>{" "}
           {isIta ? (
-            <>A pochi passi dalla Metro Policlinico.</>
+            <>A pochi passi dalla Metro Policlinico</>
           ) : (
-            <>Just a few steps from Policlinico Metro Station.</>
+            <>Just a few steps from Policlinico Metro Station</>
           )}
         </div>
 
         <div>
           <i className="bi bi-geo-fill textTiffany"></i>{" "}
           {isIta ? (
-            <>A 20 min a piedi da Stazione Termini e Tiburtina.</>
+            <>A 20 min a piedi da Stazione Termini e Tiburtina</>
           ) : (
-            <>20 minutes by foot from Termini and Tiburtina stations.</>
+            <>20 minutes by foot from Termini and Tiburtina stations</>
           )}
         </div>
 
@@ -160,22 +160,22 @@ const _Home = () => {
         <div>
           <i className="bi bi-key-fill textBlue"></i>{" "}
           {isIta ? (
-            <>Possibilità di Self Check-in.</>
+            <>Possibilità di Self Check-in</>
           ) : (
-            <>Option for self check-in.</>
+            <>Option for self check-in</>
           )}
         </div>
 
         <div>
-          <i className="bi bi-tv-fill textTiffany"></i> Smart TV.
+          <i className="bi bi-tv-fill textTiffany"></i> Smart TV
         </div>
 
         <div>
           <i className="bi bi-cup-hot-fill textYellow"></i>{" "}
           {isIta ? (
-            <>Macchina del Caffè Nespresso.</>
+            <>Macchina del Caffè Nespresso</>
           ) : (
-            <>Nespresso coffee machine.</>
+            <>Nespresso coffee machine</>
           )}
         </div>
 
