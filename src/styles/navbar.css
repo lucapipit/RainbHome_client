@@ -4,7 +4,7 @@
   
   .myGlassNav {
     min-height: var(--nav-h);
-    background: rgba(221, 221, 221, 0.48);
+    background: rgba(255, 255, 255, 0.48);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);

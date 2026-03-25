@@ -49,7 +49,7 @@ const Yellow = () => {
           <div className='d-flex gap-4 pt-5 justify-content-center montserrat-400'>
             <div className='w-50'>
               <h3 className='dancing-script-400 textDarkGray'>{isIta ? "Superficie" : "Surface"}</h3>
-              <h5 className='fw-light'>13 m<sup>2</sup></h5>
+              <h5 className='fw-light'>15 m<sup>2</sup></h5>
             </div>
             <div className='w-50' style={{ borderLeft: "2px solid #888" }}>
               <h3 className='dancing-script-400 textDarkGray'>{isIta ? "Massima Occupazione" : "Maximum Occupancy"}</h3>
