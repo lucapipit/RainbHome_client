@@ -73,7 +73,7 @@ const _MyNavbar = () => {
             <Nav.Link href="/photogallery" className="myNavLink">
               {isIta ? "Galleria Foto" : "Photo Gallery"}
             </Nav.Link>
-            <Nav.Link href="/contact" className="myNavLink">
+            <Nav.Link href="/contacts" className="myNavLink">
               {isIta ? "Contatti" : "Contact"}
             </Nav.Link>
           </Nav>

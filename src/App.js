@@ -13,6 +13,7 @@ import LillaPage from "./pages/LillaPage";
 import BluettePage from "./pages/BluettePage";
 import YellowPage from "./pages/YellowPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import ContactsPage from "./pages/ContactsPage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/bluette" element={<BluettePage />} />
         <Route path="/yellow" element={<YellowPage />} />
         <Route path="/privacypolicy" element={<PrivacyPolicyPage />} />
+        <Route path="/contacts" element={<ContactsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

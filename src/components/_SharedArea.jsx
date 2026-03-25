@@ -31,9 +31,9 @@ const _SharedArea = () => {
 
     return (
         <div>
-            <div className='d-flex justify-content-center'>
+            <div className='d-flex justify-content-center textDarkGray'>
                 <div className='dancing-script-400 text-center py-5 px-3 myMaxW900'>
-                    <h1 className='textDarkGray'>{isIta ? "Area Comune" : "Shared Area"}</h1>
+                    <h1 className=''>{isIta ? "Area Comune" : "Common Area"}</h1>
                     {
                         isIta ?
                             <div className='montserrat-400 text-start pt-3'>
@@ -46,12 +46,6 @@ const _SharedArea = () => {
                                         <li>posate, bicchieri e utensili di base per una colazione semplice</li>
                                     </ul>
                                 </div>
-
-                                <h5 className='fw-light'>Per mantenere un ambiente piacevole per tutti, vi chiediamo gentilmente di evitare di cucinare nell’area comune, così da non creare odori che possano disturbare gli altri ospiti.
-
-                                    Vi chiediamo inoltre di aiutarci a mantenere lo spazio sempre pulito e accogliente: piatti, posate, bicchieri e qualsiasi utensile utilizzato dovranno essere lavati poco dopo l’uso.
-
-                                    Grazie per la collaborazione e per contribuire a mantenere un ambiente confortevole per tutti.</h5>
                             </div>
                             :
                             <div className='montserrat-400 text-start pt-3'>
@@ -64,31 +58,23 @@ const _SharedArea = () => {
                                         <li>cutlery, glasses, and basic utensils for a simple breakfast</li>
                                     </ul>
                                 </div>
-
-                                <h5 className='fw-light'>To keep the space pleasant for everyone, we kindly ask guests to avoid cooking in the common area, as strong food smells may disturb others.
-
-                                    Please help us keep the area clean and welcoming: dishes, cutlery, glasses, and any items used should be washed shortly after use.
-
-                                    Thank you for your cooperation and for helping us maintain a comfortable environment for all guests.</h5>
                             </div>
                     }
 
                     <div className='d-flex gap-4 pt-5 justify-content-center montserrat-400'>
                         <div className='w-50'>
-                            <h3 className='dancing-script-400 textDarkGray'>{isIta ? "Frigorifero" : "Refrigerator"}</h3>
-                            <h5 className='fw-light'>{isIta ? "Condiviso" : "Shared"}</h5>
+                            <h3 className='dancing-script-400 '>{isIta ? "Frigorifero" : "Refrigerator"}</h3>
                         </div>
                         <div className='w-50' style={{ borderLeft: "2px solid #888" }}>
-                            <h3 className='dancing-script-400 textDarkGray'>{isIta ? "Macchina del Caffè Nespresso" : "Nespresso Coffè Machine"}</h3>
-                            <h5 className='fw-light'>{isIta ? "Cialde in omaggio" : "Free pods"}</h5>
+                            <h3 className='dancing-script-400 '>{isIta ? "Macchina del Caffè Nespresso" : "Nespresso Coffè Machine"}</h3>
                         </div>
                     </div>
                 </div>
 
             </div>
             <div>
-                <div className='py-5'>
-                    <h1 className='dancing-script-400 textDarkGray text-center'>Gallery</h1>
+                <div className='py-5 textDarkGray'>
+                    <h1 className='dancing-script-400  text-center'>Gallery</h1>
                     <RoomGallery start={1} end={6} />
                 </div>
             </div>

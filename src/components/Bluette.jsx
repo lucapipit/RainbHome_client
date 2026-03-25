@@ -32,17 +32,17 @@ const Bluette = () => {
   return (
     <div className='textGray'>
       <div style={{ overflow: "hidden", height: "75vh" }}>
-        <img src={require(`../assets/pics_hero/web-2.jpg`)} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
+        <img src={require(`../assets/pics_hero/web-8.jpg`)} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
       </div>
 
       <div className='d-flex justify-content-center'>
-        <div className='dancing-script-400 text-center py-5 px-3 myMaxW600'>
+        <div className='dancing-script-400 text-center py-5 px-3 myMaxW900'>
           <h1 className='textDarkGray'>{isIta ? "Camera Singola Bluette" : "Bluette Single Room"}</h1>
           <h5 className='fw-light montserrat-400'>
             {
               isIta ?
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam culpa nobis aliquam, ipsum sit ipsam temporibus, repellat nostrum recusandae, error maiores modi optio tempora laboriosam necessitatibus! Quas tempore deleniti enim."
-                : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam culpa nobis aliquam, ipsum sit ipsam temporibus, repellat nostrum recusandae, error maiores modi optio tempora laboriosam necessitatibus! Quas tempore deleniti enim."
+                "La Camera Bluette è la nostra camera singola, accogliente e curata nei dettagli. Il bluette è il colore della profondità e della tranquillità: ispira fiducia, stabilità e quiete, avvolgendo l’ambiente in una piacevole sensazione di calma. Dispone di un comodo letto alla francese, armadio, scrivania, poggia valigia e Smart TV. Il bagno privato in camera, sprovvisto di bidet, è dotato di doccia, set di asciugamani, bagnodoccia e asciugacapelli. La stanza è completa di aria condizionata e riscaldamento indipendenti, per garantire il massimo comfort in ogni stagione. Intima e funzionale, è la soluzione ideale per chi viaggia da solo e desidera uno spazio confortevole, curato e rilassante. 💙"
+                : "The Bluette Room is our single room, cozy and carefully designed with attention to detail; bluette, a deep shade of blue, symbolizes depth and tranquility, inspiring a sense of trust, stability, and calm, and enveloping the space in a relaxing atmosphere; the room features a comfortable French bed, wardrobe, desk, luggage rack, and Smart TV; the private en-suite bathroom, without a bidet, includes a shower, towels, body wash, and a hairdryer; the room is equipped with independent air conditioning and heating to ensure maximum comfort in every season; intimate and functional, it is the ideal solution for solo travelers looking for a comfortable, well-designed, and relaxing space. 💙"
             }
           </h5>
           <div className='d-flex gap-4 pt-5 justify-content-center montserrat-400'>
@@ -80,32 +80,36 @@ const Bluette = () => {
         >
           <div>
             <i className="bi bi-droplet-fill textBlue"></i>{" "}
-            <b>{isIta ? "Bagno privato" : "Private bathroom"}</b>{" "}
+            {isIta ? "Bagno privato" : "En-suite bathroom"}{" "}
             {isIta ? "con doccia." : "with shower."}
           </div>
 
-          <div>
-            <i className="bi bi-wifi textYellow"></i> <b>Wi-Fi</b>{" "}
-            {isIta ? "gratuito." : "free."}
-          </div>
+        <div>
+          <i className="bi bi-wifi textYellow"></i>{" "}
+          {isIta ? (
+            <>Wi-Fi gratuito.</>
+          ) : (
+            <>Free Wi-Fi.</>
+          )}
+        </div>
 
           <div>
             <i className="bi bi-person-hearts textLilla"></i>{" "}
-            <b>{isIta ? "Accoglienza Dedicata" : "Dedicated hospitality"}</b>{" "}
+            {isIta ? "Accoglienza Dedicata" : "Dedicated hospitality"}{" "}
             {isIta ? "per il soggiorno." : "throughout your stay."}
           </div>
 
           <div>
             <i className="bi bi-key-fill textBlue"></i>{" "}
             {isIta ? (
-              <>Possibilità di <b>Self Check-in</b>.</>
+              <>Possibilità di Self Check-in.</>
             ) : (
-              <>Option for <b>self check-in</b>.</>
+              <>Option for self check-in.</>
             )}
           </div>
 
           <div>
-            <i className="bi bi-tv-fill textTiffany"></i> <b>Smart TV</b>.
+            <i className="bi bi-tv-fill textTiffany"></i> Smart TV.
           </div>
 
         </div>

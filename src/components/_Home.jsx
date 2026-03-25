@@ -63,12 +63,12 @@ const _Home = () => {
             <div className='overflowImg border'>
               <img
                 src={lilla}
-                alt={isIta ? "Camera Doppia Lilla" : "Lilac Double Room"}
+                alt={isIta ? "Camera Doppia Lilla" : "Lilla Double Room"}
               />
             </div>
           </a>
           <Carousel.Caption>
-            <h1>{isIta ? "Camera Doppia Lilla" : "Lilac Double Room"}</h1>
+            <h1>{isIta ? "Camera Doppia Lilla" : "Lilla Double Room"}</h1>
           </Carousel.Caption>
         </Carousel.Item>
 
@@ -110,65 +110,78 @@ const _Home = () => {
         style={{ color: "#444" }}
       >
         <div>
+          <i className="bi bi-house-lock-fill textTiffany"></i>{" "}
+          {isIta ? (
+            <>4 camere indipendenti.</>
+          ) : (
+            <>4 indipendent rooms.</>
+          )}
+        </div>
+
+        <div>
           <i className="bi bi-droplet-fill textBlue"></i>{" "}
-          <b>{isIta ? "Bagno privato" : "Private bathroom"}</b>{" "}
+          {isIta ? "Bagno privato" : "En-suite bathroom"}{" "}
           {isIta ? "con doccia." : "with shower."}
         </div>
 
         <div>
           <i className="bi bi-geo-alt-fill textLilla"></i>{" "}
           {isIta ? (
-            <>A pochi passi dalla <b>Metro Policlinico</b>.</>
+            <>A pochi passi dalla Metro Policlinico.</>
           ) : (
-            <>Just a few steps from <b>Policlinico Metro Station</b>.</>
+            <>Just a few steps from Policlinico Metro Station.</>
           )}
         </div>
 
         <div>
           <i className="bi bi-geo-fill textTiffany"></i>{" "}
           {isIta ? (
-            <>A 20 min a piedi da <b>Stazione Termini</b> e <b>Tiburtina</b>.</>
+            <>A 20 min a piedi da Stazione Termini e Tiburtina.</>
           ) : (
-            <>20 minutes on foot from <b>Termini</b> and <b>Tiburtina</b> stations.</>
+            <>20 minutes by foot from Termini and Tiburtina stations.</>
           )}
         </div>
 
         <div>
-          <i className="bi bi-wifi textYellow"></i> <b>Wi-Fi</b>{" "}
-          {isIta ? "gratuito." : "free."}
+          <i className="bi bi-wifi textYellow"></i>{" "}
+          {isIta ? (
+            <>Wi-Fi gratuito.</>
+          ) : (
+            <>Free Wi-Fi.</>
+          )}
         </div>
 
         <div>
           <i className="bi bi-person-hearts textLilla"></i>{" "}
-          <b>{isIta ? "Accoglienza Dedicata" : "Dedicated hospitality"}</b>{" "}
+          {isIta ? "Accoglienza Dedicata" : "Dedicated hospitality"}{" "}
           {isIta ? "per il soggiorno." : "throughout your stay."}
         </div>
 
         <div>
           <i className="bi bi-key-fill textBlue"></i>{" "}
           {isIta ? (
-            <>Possibilità di <b>Self Check-in</b>.</>
+            <>Possibilità di Self Check-in.</>
           ) : (
-            <>Option for <b>self check-in</b>.</>
+            <>Option for self check-in.</>
           )}
         </div>
 
         <div>
-          <i className="bi bi-tv-fill textTiffany"></i> <b>Smart TV</b>.
+          <i className="bi bi-tv-fill textTiffany"></i> Smart TV.
         </div>
 
         <div>
           <i className="bi bi-cup-hot-fill textYellow"></i>{" "}
           {isIta ? (
-            <>Macchina del <b>Caffè</b> Nespresso.</>
+            <>Macchina del Caffè Nespresso.</>
           ) : (
-            <>Nespresso <b>coffee machine</b>.</>
+            <>Nespresso coffee machine.</>
           )}
         </div>
 
         <div>
           <i className="bi bi-tencent-qq textBlue"></i>{" "}
-          <b>{isIta ? "Frigorifero" : "Refrigerator"}</b>.
+          {isIta ? "Frigorifero condiviso" : "Shared refrigerator"}.
         </div>
       </div>
 
@@ -177,10 +190,10 @@ const _Home = () => {
           <img src={logo} alt="RainbHome Logo" style={{ height: 100 }} />
         </div>
 
-        <h5 className='montserrat-300 w-100 myMaxW900 pb-4'>
+        <h5 className='montserrat-300 w-100 myMaxW900 pb-4 textDarkGray text-center'>
           {isIta ? (
             <>
-              Benvenuti a <b>RainbHome</b>, il vostro angolo colorato nel cuore di Roma!
+              Benvenuti a <b className='dancing-script-400 display-6'>RainbHome</b>, il vostro nido colorato nel cuore di Roma!<br/>
               A pochi passi dalla Metro Policlinico e nel cuore della zona universitaria de La Sapienza,
               RainbHome offre una posizione sicura e ben collegata, equidistante dalle <b>Stazioni di Roma Termini</b> e <b>Roma Tiburtina</b>,
               raggiungibili in pochi minuti di metro, autobus o a piedi.
@@ -203,10 +216,10 @@ const _Home = () => {
             </>
           ) : (
             <>
-              Welcome to <b>RainbHome</b>, your colorful corner in the heart of Rome!
+              Welcome to <b className='dancing-script-400 display-6'>RainbHome</b>, your colorful nest in the heart of Rome!<br/>
               Just a short walk from Policlinico Metro Station and in the heart of the La Sapienza university district,
               RainbHome offers a safe and well-connected location, conveniently positioned between <b>Rome Termini</b> and <b>Rome Tiburtina</b> stations,
-              both reachable in just a few minutes by metro, bus, or on foot.
+              both reachable in just a few minutes by metro, bus, or by foot.
 
               <br /><br />
 
@@ -215,7 +228,7 @@ const _Home = () => {
 
               <br /><br />
 
-              There are four rooms – three double rooms and one single room – all with private bathroom, smart TV,
+              There are four rooms – three double rooms and one single room – all with En-suite bathroom, smart TV,
               hairdryer, wardrobe, and desk. Each room has its own unique color and personality:
               this is where the name RainbHome comes from, a lively and colorful place that combines the joy of the rainbow
               with the warmth of a true home.

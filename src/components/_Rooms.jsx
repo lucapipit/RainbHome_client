@@ -60,9 +60,9 @@ const _Rooms = () => {
               onMouseLeave={() => setHover(false)}
             >
               <div className='roomsOverlay d-flex justify-content-center align-items-end pb-4'>
-                <h1>{isIta ? "Camera Lilla" : "Lilac Room"}</h1>
+                <h1>{isIta ? "Camera Lilla" : "Lilla Room"}</h1>
               </div>
-              <img className='roomsImg' src={lilla} alt={isIta ? "Camera lilla" : "Lilac room"} />
+              <img className='roomsImg' src={lilla} alt={isIta ? "Camera lilla" : "Lilla room"} />
             </div>
           </Link>
         </div>

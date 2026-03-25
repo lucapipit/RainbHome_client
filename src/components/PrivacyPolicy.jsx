@@ -28,7 +28,7 @@ const PrivacyPolicy = () => {
     }, []);
 
     const fullName = "Giulia De Sanctis";
-    const email = "info@rainbHome.com";
+    const email = "info@rainbhome.com";
     const address = "Via Alfonso Borelli, 7, 00161 Roma RM";
     const siteName = "RainbHome Roman Suites";
     const lastUpdated = "25/03/2026";

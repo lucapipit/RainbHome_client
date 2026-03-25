@@ -33,17 +33,17 @@ const Yellow = () => {
   return (
     <div className='textGray'>
       <div style={{ overflow: "hidden", height: "75vh" }}>
-        <img src={require(`../assets/pics_hero/web-1.jpg`)} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
+        <img src={require(`../assets/pics_hero/web-6.jpg`)} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
       </div>
 
       <div className='d-flex justify-content-center'>
-        <div className='dancing-script-400 text-center py-5 px-3 myMaxW600'>
+        <div className='dancing-script-400 text-center py-5 px-3 myMaxW900'>
           <h1 className='textDarkGray'>{isIta ? "Camera Doppia Gialla" : "Yellow Double Room"}</h1>
           <h5 className='fw-light montserrat-400'>
             {
               isIta ?
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam culpa nobis aliquam, ipsum sit ipsam temporibus, repellat nostrum recusandae, error maiores modi optio tempora laboriosam necessitatibus! Quas tempore deleniti enim."
-                : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam culpa nobis aliquam, ipsum sit ipsam temporibus, repellat nostrum recusandae, error maiores modi optio tempora laboriosam necessitatibus! Quas tempore deleniti enim."
+                "La Camera Gialla è un’esplosione di luce ed energia: il giallo è il colore del sole, della vitalità e dell’allegria, una tonalità che regala buonumore fin dal primo risveglio e rende l’ambiente caldo e accogliente; dispone di un comodo letto matrimoniale, armadio spazioso, pratica scrivania, poggia valigia e Smart TV; il bagno privato in camera è completo di doccia, bidet, set di asciugamani, bagnodoccia e asciugacapelli; la stanza è dotata di aria condizionata e riscaldamento indipendenti, per garantirvi il massimo comfort in ogni stagione; una camera luminosa e positiva, perfetta per chi ama iniziare la giornata con il sorriso. 💛"
+                : "The Yellow Room is an explosion of light and energy: yellow is the color of the sun, vitality, and joy, a shade that lifts your mood from the very first awakening and makes the space warm and welcoming; it features a comfortable double bed, spacious wardrobe, practical desk, luggage rack, and Smart TV; the private en-suite bathroom includes a shower, bidet, towels, body wash, and a hairdryer; the room is equipped with independent air conditioning and heating to ensure maximum comfort in every season; a bright and positive room, perfect for those who love to start the day with a smile. 💛"
             }
           </h5>
           <div className='d-flex gap-4 pt-5 justify-content-center montserrat-400'>
@@ -81,32 +81,36 @@ const Yellow = () => {
         >
           <div>
             <i className="bi bi-droplet-fill textBlue"></i>{" "}
-            <b>{isIta ? "Bagno privato" : "Private bathroom"}</b>{" "}
+            {isIta ? "Bagno privato" : "En-suite bathroom"}{" "}
             {isIta ? "con doccia." : "with shower."}
           </div>
 
-          <div>
-            <i className="bi bi-wifi textYellow"></i> <b>Wi-Fi</b>{" "}
-            {isIta ? "gratuito." : "free."}
-          </div>
+        <div>
+          <i className="bi bi-wifi textYellow"></i>{" "}
+          {isIta ? (
+            <>Wi-Fi gratuito.</>
+          ) : (
+            <>Free Wi-Fi.</>
+          )}
+        </div>
 
           <div>
             <i className="bi bi-person-hearts textLilla"></i>{" "}
-            <b>{isIta ? "Accoglienza Dedicata" : "Dedicated hospitality"}</b>{" "}
+            {isIta ? "Accoglienza Dedicata" : "Dedicated hospitality"}{" "}
             {isIta ? "per il soggiorno." : "throughout your stay."}
           </div>
 
           <div>
             <i className="bi bi-key-fill textBlue"></i>{" "}
             {isIta ? (
-              <>Possibilità di <b>Self Check-in</b>.</>
+              <>Possibilità di Self Check-in.</>
             ) : (
-              <>Option for <b>self check-in</b>.</>
+              <>Option for self check-in.</>
             )}
           </div>
 
           <div>
-            <i className="bi bi-tv-fill textTiffany"></i> <b>Smart TV</b>.
+            <i className="bi bi-tv-fill textTiffany"></i> Smart TV.
           </div>
 
         </div>
