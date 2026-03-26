@@ -14,10 +14,12 @@ import BluettePage from "./pages/BluettePage";
 import YellowPage from "./pages/YellowPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import ContactsPage from "./pages/ContactsPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/photogallery" element={<PhotoGalleryPage />} />

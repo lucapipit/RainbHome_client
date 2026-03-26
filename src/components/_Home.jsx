@@ -145,9 +145,9 @@ const _Home = () => {
         <div>
           <i className="bi bi-wifi textYellow"></i>{" "}
           {isIta ? (
-            <>Wi-Fi gratuito.</>
+            <>Wi-Fi gratuito</>
           ) : (
-            <>Free Wi-Fi.</>
+            <>Free Wi-Fi</>
           )}
         </div>
 
