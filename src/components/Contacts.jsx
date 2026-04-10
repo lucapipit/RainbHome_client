@@ -67,7 +67,13 @@ const Contacts = () => {
           </a>
 
         </div>
+        
       ))}
+
+      <div className='mt-5 display-1 d-flex justify-content-center align-items-center flex-wrap'>
+        <i className='bi bi-geo-alt-fill textYellow me-3'></i>
+        <h1>Via Alfonso Borelli, 7 - 00161, Roma</h1>
+      </div>
     </div>
   );
 };
